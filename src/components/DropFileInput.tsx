@@ -82,7 +82,7 @@ function DropFileInput() {
           {fileList.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col sm:flex-row items-center justify-center flex-wrap bg-amber-50 rounded-lg border-2 border-amber-500/50 m-2 p-2 gap-6 hover:bg-amber-100"
+              className="flex flex-col sm:flex-row items-center justify-center flex-wrap bg-amber-50 rounded-lg border-2 border-amber-500/50 m-2 p-2 gap-6 hover:bg-amber-100 hover:scale-105 transition ease-in-out delay-150"
             >
               <div className="flex flex-col gap-3 grow">
                 <div className="flex">
@@ -109,12 +109,30 @@ function DropFileInput() {
               </div>
             </div>
           ))}
-          <input
-            type="text"
-            placeholder="please add discription for the file please"
-            className="p-3 block mx-auto my-2 w-full border-2 outline-4 outline-inherit rounded-md border-slate-300 border-solid hover:border-amber-300"
-          />
-          <button className="mx-auto my-2 bg-amber-200 p-4 w-1/2 rounded-lg border-2 border-amber-500/50 hover:bg-amber-300 hover:border-amber-500/100">
+          <div className="flex gap-4 flex-col sm:flex-row">
+            <input
+              type="text"
+              placeholder="please add discription for the file please"
+              className="p-3 block mx-auto w-full border-2 outline-4 outline-inherit rounded-md border-slate-300 border-solid hover:border-amber-300 hover:scale-105 transition ease-in-out delay-150"
+            />
+            <select className="px-2 rounded-lg bg-amber-200 border-2 border-amber-500/50 hover:bg-amber-300 hover:border-amber-500/100 hover:scale-105 transition ease-in-out delay-150">
+              <option value="" disabled selected hidden>
+                Category
+              </option>
+              <option value="1">Creative</option>
+              <option value="2">Productivity</option>
+              <option value="3">Sharing</option>
+              <option value="3">none</option>
+
+              <input
+                type="text"
+                placeholder="please add discription for the file please"
+                className="p-3 block mx-auto my-2 w-full border-2 outline-4 outline-inherit rounded-md border-slate-300 border-solid hover:border-amber-300 hover:scale-110 transition ease-in-out delay-150"
+              />
+            </select>
+          </div>
+
+          <button className="mx-auto my-2 bg-amber-200 p-4 w-1/2 rounded-lg border-2 border-amber-500/50 hover:bg-amber-300 hover:border-amber-500/100 hover:scale-110 transition ease-in-out delay-150">
             Upload
           </button>
         </div>
